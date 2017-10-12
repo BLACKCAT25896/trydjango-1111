@@ -40,6 +40,7 @@ urlpatterns = [
     url(r'^post_list', posts_views.post_list, name='post_list'),
     url(r'^post_create', posts_views.post_create, name='post_create'),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^profile$', pro_views.userProfile, name='profile'),
 
     url(r'^register/', register_view, name='register'),
     url(r'^login/', login_view, name='login'),
