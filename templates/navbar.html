@@ -18,7 +18,7 @@
           {% url 'about' as about %}
           {% url 'contact' as contact %}
 {#          {% url 'checkout' as checkout %}#}
-          {% url 'post_list' as post_list %}
+{#          {% url 'post_list' as post_list %}#}
 {#          {% url 'post_create' as post_create %}#}
 
 
@@ -26,11 +26,21 @@
             <li {% if request.path == about %} class="active" {% endif %}><a href="{% url 'about' %}">ABOUT</a></li>
             <li {% if request.path == contact %} class="active" {% endif %}><a href="{% url 'contact' %}"><span class="glyphicon glyphicon-phone-alt"></span>CONTACT</a></li>
 {#             <li {% if request.path == checkout %} class="active" {% endif %}><a href="{% url 'checkout' %}">PAYMENT</a></li>#}
-              <li {% if request.path == post_list %} class="active" {% endif %}><a href="{% url 'post_list' %}">POSTS</a></li>
-{#            <li {% if request.path == post_create %} class="active" {% endif %}><a href="{% url 'post_create' %}">CREATE_POSTS</a></li>#}
+{#              <li {% if request.path == post_list %} class="active" {% endif %}><a href="{% url 'post_list' %}">POSTS</a></li>#}
+{#            <li {% if request.path == post_create %} class="active" {% endif %}><a href="{% url 'post_create' %}"><span class="glyphicon glyphicon-pencil"></span>CREATE-POSTS</a></li>#}
 
 
 
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POSTS<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+
+                <li><a href="{% url 'post_list' %}"><span class="glyphicon glyphicon-book" ></span>POST-VIEW</a></li>
+                <li><a href="{% url 'post_create' %}"><span class="glyphicon glyphicon-pencil" ></span>CREATE</a></li>
+
+
+              </ul>
+            </li>
 
 
           </ul>
@@ -44,7 +54,7 @@
 
 
              <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" style="color:red"></span>DOCTOR<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" style="color:red"></span>ENTER<span class="caret"></span></a>
               <ul class="dropdown-menu">
                   {% if not request.user.is_authenticated %}
                 <li><a href="{% url 'register' %}">SIGNUP</a></li>
@@ -61,7 +71,7 @@
 
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" style="color:green"></span>PATIENT<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" style="color:green"></span>ENTER<span class="caret"></span></a>
               <ul class="dropdown-menu">
                   {% if not request.user.is_authenticated %}
                 <li><a href="{% url 'register' %}">SIGNUP</a></li>
