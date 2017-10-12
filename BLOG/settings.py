@@ -41,11 +41,16 @@ INSTALLED_APPS = [
     'crispy_forms',
     'markdown_deux',
     'pagedown',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
     # local apps
     'comments',
     'posts',
     'pro',
+    'accounts'
 
 ]
 

@@ -22,6 +22,7 @@ from pro import views as pro_views
 from contact import views as contact_views
 from checkout import views as checkout_views
 from posts import views as posts_views
+from accounts import views as accounts_views
 
 
 from accounts.views import (login_view, register_view, logout_view)
@@ -38,6 +39,7 @@ urlpatterns = [
     url(r'^contact$', contact_views.contact, name='contact'),
     url(r'^post_list', posts_views.post_list, name='post_list'),
     url(r'^post_create', posts_views.post_create, name='post_create'),
+    url(r'^accounts/', include('allauth.urls')),
 
     url(r'^register/', register_view, name='register'),
     url(r'^login/', login_view, name='login'),

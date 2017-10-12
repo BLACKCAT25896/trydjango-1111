@@ -2,10 +2,10 @@
 <!--DOCTYPE html -->
 <html>
 <head>
-<title>{% block head_title %}Bekar.com{% endblock head_title %}</title>
+<title>{% block head_title %} BAKAR.com{% endblock head_title %}</title>
 <!-- Latest compiled and minified CSS -->
-% load staticfiles %}
-<link rel="shortcut icon" type="image/png" href="{%  static 'img/fav.png' %}"/>
+
+<link rel="shortcut icon" type="image/png" href="{%  static 'img/kk.ico' %}"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -16,8 +16,16 @@
 
 <link rel='stylesheet' href='{% static "css/base.css" %}' />
 <link rel="stylesheet" href="{% static "css/demo.css" %}">
-	<link rel="stylesheet" href="{% static "css/footer-distributed-with-address-and-phones.css" %}">
 
+    <link rel="stylesheet" href="{% static "css/footer-distributed-with-address-and-phones.css" %}">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/theme.css' %}" rel="stylesheet">
 <style>
 {% block style %}{% endblock style %}
 </style>
@@ -57,7 +65,7 @@
      $(document).ready(function(){
         $('.dropdown-toggle').dropdown()
     });
-     { % block jquery %} { % endblock jquery %}
+     {% block jquery %} {% endblock jquery %}
 </script>
 
 
