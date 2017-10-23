@@ -45,12 +45,13 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'stripe',
 
     # local apps
     'comments',
     'posts',
     'pro',
-    'accounts'
+
 
 ]
 

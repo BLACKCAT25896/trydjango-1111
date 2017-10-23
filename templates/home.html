@@ -24,7 +24,7 @@
         </div> -->
         <div class="col-md-8">
             {% if request.user.is_authenticated %}
-            <h3>Hello {{ request.user }} You Are Welcome</h3>
+            <h1>Hello {{ request.user }} You Are Welcome</h1>
 
             {% else %}
             <form class="login" method="POST" action="{% url 'login' %}">
