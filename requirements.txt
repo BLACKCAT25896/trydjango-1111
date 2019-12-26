@@ -30,5 +30,5 @@ static3==0.7.0
 stripe==1.62.1
 urllib3==1.22
 virtualenv==15.1.0
-waitress==1.1.0
+waitress==1.4.1
 whitenoise==3.2
